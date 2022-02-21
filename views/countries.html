@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<body>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Dial Code</th>
+        <th>ISO Code</th>
+        <th>Flag</th>
+    </tr>
+    {{ range .Data}}
+        <tr>
+            <td>{{ .Name }}</td>
+            <td>{{ .DialCode }}</td>
+            <td>{{ .IsoCode }}</td>
+            <td>{{ .Flag }}</td>
+        </tr>
+    {{ end}}
+</table>
+</body>
+</html>
